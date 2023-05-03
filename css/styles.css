@@ -783,14 +783,14 @@ nav .link {
   border-radius: 2px;
 }
 
+.modal-checkbox:focus + .modal-privacy::before {
+  outline: 1px solid var(--alt-secondary-color-text);
+}
+
 .modal-checkbox:checked + .modal-privacy::before {
   background-color: var(--alt-secondary-color-text);
   background-image: url(../images/checked.svg);
-  outline: none;
-}
-
-.modal-checkbox:focus + .modal-privacy::before {
-  outline: 1px solid var(--alt-secondary-color-text);
+  outline: 1px solid transparent;
 }
 
 .form-send-btn {
