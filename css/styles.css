@@ -116,12 +116,12 @@ body {
   /* identical to box height, or 150% */
 }
 
-nav .link {
-  transition: color var(--transition-dur-tfunc);
-}
-
 .contact {
   margin-left: auto;
+}
+
+.nav .link {
+  transition: color var(--transition-dur-tfunc);
 }
 
 .contact .link {
@@ -169,7 +169,7 @@ nav .link {
   position: relative;
 }
 
-.nav .menu.current-page {
+.menu.current-page {
   color: var(--alt-secondary-color-btn);
 }
 
@@ -563,7 +563,8 @@ nav .link {
   transition: border var(--transition-dur-tfunc);
 }
 
-.footer-input:focus {
+.footer-input:focus,
+.footer-input:hover {
   border: 1px solid var(--alt-secondary-color-text);
 }
 
@@ -650,22 +651,30 @@ nav .link {
   width: 24px;
   height: 24px;
   padding: 0;
+  cursor: pointer;
 
   background-color: var(--secondary-color-btn);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill var(--transition-dur-tfunc),
+    background-color var(--transition-dur-tfunc);
 }
 
-.modal-close-btn:active {
+.modal-close-btn:active,
+.modal-close-btn:hover {
   background-color: var(--alt-secondary-color-btn);
 }
 
 .close-btn {
   width: 8px;
   height: 8px;
+
+  transition: fill var(--transition-dur-tfunc);
 }
 
-.modal-close-btn:active .close-btn {
+.modal-close-btn:active .close-btn,
+.modal-close-btn:hover .close-btn {
   fill: var(--alt-color);
 }
 
@@ -709,6 +718,7 @@ nav .link {
   transition: fill var(--transition-dur-tfunc);
 }
 
+.modal-input:hover + .form-icon,
 .modal-input:focus + .form-icon {
   fill: var(--alt-secondary-color-text);
 }
@@ -739,7 +749,9 @@ nav .link {
 }
 
 .modal-input:focus,
-.modal-comment:focus {
+.modal-comment:focus,
+.modal-input:hover,
+.modal-comment:hover {
   border: 1px solid var(--alt-secondary-color-text);
 }
 
@@ -781,6 +793,9 @@ nav .link {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+
+  transition: background-color var(--transition-dur-tfunc),
+    background-image var(--transition-dur-tfunc);
 }
 
 .modal-checkbox:focus + .modal-privacy::before {
